@@ -10,6 +10,20 @@ import UIKit
 import AVFoundation
 class QQMusicTool: NSObject {
     var player : AVAudioPlayer?
+    override init() {
+        super.init()
+        // 获取音频会话
+        let session = AVAudioSession.sharedInstance()
+        do{
+            // 设置音频会话类别
+            try session.setCategory(AVAudioSessionCategoryPlayback)
+            try session.setActive(true)
+        }catch{
+            print(error)
+            return
+        }
+        
+    }
     func playMusic(name : String) {
         // 创建播放器
         guard let url = NSBundle.mainBundle().URLForResource(name, withExtension: nil) else{

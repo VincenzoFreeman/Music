@@ -27,7 +27,7 @@ class QQMusicDataTool: NSObject {
             resultModels.append(musicModel)
         }
         // 返回数组出去
-        result(musics: resultModels + resultModels)
+        result(musics: resultModels)
         
     }
 }

@@ -24,7 +24,7 @@ class QQMusicOperationTool: NSObject {
         }
     }
     private var musicMessageModel : QQMusicMessageModel = QQMusicMessageModel()
-    func getNowMessageModel() -> QQMusicMessageModel {
+    func getNewMessageModel() -> QQMusicMessageModel {
         // 给属性赋值
         musicMessageModel.musicModels = musicModelLists?[index]
         // 已经播放时间
